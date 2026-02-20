@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bg-primary: #fdf8e1;
+    /* Pale yellow */
+    --bg-secondary: #fff;
+
+    --text-primary: #0f0f0f;
+    /* Hard black text */
+    --text-secondary: #333333;
+
+    /* Funky palette */
+    --accent-pink: #ff007f;
+    --accent-cyan: #00f0ff;
+    --accent-orange: #ff5722;
+    --accent-green: #ccff00;
+    --accent-purple: #8A2BE2;
+    --accent-yellow: #ffde00;
+
+    --border-hard: #000000;
+
+    --font-heading: 'Righteous', cursive;
+    --font-body: 'Space Mono', monospace;
+
+    --nav-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Funky dot grid background pattern */
+    background-image: radial-gradient(var(--border-hard) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-weight: 700;
+}
+
+/* Base Neobrutalist Panel */
+.funky-panel {
+    background: var(--bg-secondary);
+    border: 4px solid var(--border-hard);
+    border-radius: 0px;
+    /* Sharp edges */
+    box-shadow: 10px 10px 0px var(--border-hard);
+}
+
+/* Interactive elements */
+.funky-hover {
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.funky-hover:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 14px 14px 0px var(--border-hard);
+}
+
+.funky-hover:active {
+    transform: translate(8px, 8px);
+    box-shadow: 2px 2px 0px var(--border-hard);
+}
+
+/* Buttons */
+.funky-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    background-color: var(--accent-pink);
+    color: white;
+    border: 4px solid var(--border-hard);
+    box-shadow: 8px 8px 0px var(--border-hard);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    text-shadow: 2px 2px 0px var(--border-hard);
+}
+
+.funky-btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--border-hard);
+}
+
+.funky-btn:active {
+    transform: translate(6px, 6px);
+    box-shadow: 2px 2px 0px var(--border-hard);
+}
+
+/* Text Stroke / Outline effect */
+.text-stroke {
+    color: white;
+    -webkit-text-stroke: 3px var(--border-hard);
+    text-shadow: 8px 8px 0px var(--border-hard);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Sections */
+section {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    /* Prevent funky absolute decorative stuff from causing scroll */
+}
+
+/* Custom Scrollbar for brutalism */
+::-webkit-scrollbar {
+    width: 16px;
+    border-left: 4px solid var(--border-hard);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--accent-yellow);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-purple);
+    border: 4px solid var(--border-hard);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-pink);
+}
